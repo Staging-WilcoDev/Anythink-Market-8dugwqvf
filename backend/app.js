@@ -1,4 +1,6 @@
 require("dotenv").config();
+require('newrelic');
+
 var http = require("http"),
   path = require("path"),
   methods = require("methods"),
@@ -9,6 +11,7 @@ var http = require("http"),
   passport = require("passport"),
   errorhandler = require("errorhandler"),
   mongoose = require("mongoose");
+
 
 var isProduction = process.env.NODE_ENV === "production";
 
